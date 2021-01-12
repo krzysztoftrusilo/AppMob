@@ -1,32 +1,21 @@
 #Projekt zaliczeniowy, aplikacje mobilne
 
-Aplikacja wykonuje założenia prostej gry logicznej, której
-celem jest mierzenie czasu, poprawnego ułożenia kolejności
-wylosowanych liczb. Powtarzające się liczby przy losowaniu
-są umyślnie wprowadzone w celu utrudnienia zadania. Kolejność
-zaznaczenia tych samych liczb nie wpływa na wynik.
+Aplikacja wykonuje założenia prostej gry logicznej, której celem jest mierzenie czasu, poprawnego ułożenia kolejności wylosowanych liczb. Powtarzające się liczby przy losowaniu są umyślnie wprowadzone w celu utrudnienia zadania. Kolejność zaznaczenia tych samych liczb nie wpływa na wynik.
 
-Ma to na celu skupienie uwagi gracza na wszystkich liczbach,
-zamiast poszukiwania kolejnej. Dla przykładu kombinacja: 1,2,2,3.
-Po zaznaczeniu liczby 2, umysł domyślnie przeskoczy na szukanie 3,
-pawdopodobnie przegapiając drugą liczbę 2.
+Ma to na celu skupienie uwagi gracza na wszystkich liczbach, zamiast poszukiwania kolejnej. Dla przykładu kombinacja: 1,2,2,3. Po zaznaczeniu liczby 2, umysł domyślnie przeskoczy na szukanie 3, pawdopodobnie przegapiając drugą liczbę 2.
 
 Aplikacja wykonana jest w języku kotlin.
 
 ##Zmienne
 
-*Stop* i *start* służą jako flagi, podobnie do zmiennej *isStarted*, pilnujące stanu gry.
-Początkowe wartości przechowywane w przyciskach zostały oznaczone zerami i są bezpośrednio
-przekazywane do przycisków. *listOfNumbers* przechowuje listę odpowiedzi wybieranych kolejno
-przez gracza dodając je do listy, która potem jest weryfikowana. *buttons* przechowuje informacje
-o fladze (włączeniu) przycisków.
+*Stop* i *start* służą jako flagi, podobnie do zmiennej *isStarted*, pilnujące stanu gry. Początkowe wartości przechowywane w przyciskach zostały oznaczone zerami i są bezpośrednio przekazywane do przycisków. *listOfNumbers* przechowuje listę odpowiedzi wybieranych kolejno przez gracza dodając je do listy, która potem jest weryfikowana. *buttons* przechowuje informacje o fladze (włączeniu) przycisków.
 
 ###Funkcje
 
 Poniższa konfiguracja nasłuchuje zmian suwaka, aby losowac w tajemnicy przed graczem
 kombinacje liczb, która ujawni się po rozpoczęciu gry.
 
-`    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+`override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
         number = progress
         numberTXT.text = number.toString()
         czasTXT.text = ""
