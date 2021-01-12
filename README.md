@@ -1,4 +1,4 @@
-#Projekt zaliczeniowy, aplikacje mobilne
+# Projekt zaliczeniowy, aplikacje mobilne
 
 Aplikacja wykonuje założenia prostej gry logicznej, której celem jest mierzenie czasu, poprawnego ułożenia kolejności wylosowanych liczb. Powtarzające się liczby przy losowaniu są umyślnie wprowadzone w celu utrudnienia zadania. Kolejność zaznaczenia tych samych liczb nie wpływa na wynik.
 
@@ -6,11 +6,11 @@ Ma to na celu skupienie uwagi gracza na wszystkich liczbach, zamiast poszukiwani
 
 Aplikacja wykonana jest w języku kotlin.
 
-##Zmienne
+## Zmienne
 
 *Stop* i *start* służą jako flagi, podobnie do zmiennej *isStarted*, pilnujące stanu gry. Początkowe wartości przechowywane w przyciskach zostały oznaczone zerami i są bezpośrednio przekazywane do przycisków. *listOfNumbers* przechowuje listę odpowiedzi wybieranych kolejno przez gracza dodając je do listy, która potem jest weryfikowana. *buttons* przechowuje informacje o fladze (włączeniu) przycisków.
 
-###Funkcje
+### Funkcje
 
 Poniższa konfiguracja nasłuchuje zmian suwaka, aby losowac w tajemnicy przed graczem
 kombinacje liczb, która ujawni się po rozpoczęciu gry.
@@ -23,13 +23,13 @@ kombinacje liczb, która ujawni się po rozpoczęciu gry.
         btn2.text = "0"
         btn3.text = "0"
         btn4.text = "0"
-    }
+    }`
 
-    override fun onStartTrackingTouch(seekBar: SeekBar?) {
+`    override fun onStartTrackingTouch(seekBar: SeekBar?) {
 
-    }
+    }`
 
-    override fun onStopTrackingTouch(seekBar: SeekBar?) {
+`    override fun onStopTrackingTouch(seekBar: SeekBar?) {
         val randomValues = List(4) { Random.nextInt(0, number) }
         println(randomValues)
         textToButton1 = randomValues[0].toString();
