@@ -2,7 +2,7 @@
 
 Aplikacja wykonuje założenia prostej gry logicznej, której celem jest mierzenie czasu, poprawnego ułożenia kolejności wylosowanych liczb. Powtarzające się liczby przy losowaniu są umyślnie wprowadzone w celu utrudnienia zadania. Kolejność zaznaczenia tych samych liczb nie wpływa na wynik.
 
-Ma to na celu skupienie uwagi gracza na wszystkich liczbach, zamiast poszukiwania kolejnej. Dla przykładu kombinacja: 1,2,2,3. Po zaznaczeniu liczby 2, umysł domyślnie przeskoczy na szukanie 3, pawdopodobnie przegapiając drugą liczbę 2.
+Ma to na celu skupienie uwagi gracza na wszystkich liczbach, zamiast poszukiwania kolejnej. Dla przykładu kombinacja: 1,2,2,3. Po zaznaczeniu liczby 2, umysł domyślnie przeskoczy na szukanie 3, prawdopodobnie przegapiając drugą liczbę 2.
 
 Aplikacja wykonana jest w języku kotlin.
 
@@ -59,7 +59,7 @@ Jeśli gra się rozpoczęła po kliknięciu konkretnego przycisku, znajdywanego 
 sprawdzenia, czy dany przycisk przypadkiem nie był już wciśnięty i ustawiamy jego flagę na stan bycia
 wciśniętym i dodajemy do listy przechowującej kolejność wybraną przez gracza. Następnie upewniamy się
 czy dany przycisk nie był ostatnim. Jeśli tak przechodzimy do sprawdzenia listy gracza i wyświetlamy
-stosowny komunikat. Po sprawdzeniu lista gracza zostaje wyczyszczona, a flai przycisków zresetowane,
+stosowny komunikat. Po sprawdzeniu lista gracza zostaje wyczyszczona, a flagi przycisków zresetowane,
 aby były gotowe na kolejny start. Przyciski obsługiwane są analogicznym kodem.
 
 ```
